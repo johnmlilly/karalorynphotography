@@ -1,0 +1,32 @@
+---
+layout: 'base.njk'
+---
+<div class="article-container container">
+<div>
+  <div>
+    <div>
+      <span class="snippet__date">{{ date | postDate }} // {{ content | emojiReadTime }}</span> 
+      <h1 class="article-title">
+      {{ title }}
+    </h1>
+     <p class="snippet__meta">
+      {{ author }}
+      </p>
+    <ul class="snippet__tags">
+      {% for tag in tags %}
+        {% if tag != 'post' and tag != 'featured' %}
+          <li>{{ tag }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    </div>
+    <div>
+      <figure>
+      <img src="/assets{{ image }}" alt="{{ imageAlt }}">
+    </figure>
+    </div>
+  </div>
+    {{ content | safe }}
+</div>
+{% cloneWarsQuote %}
+</div>

@@ -1,0 +1,34 @@
+{
+  "name": "johnsblog",
+  "version": "1.0.0",
+  "description": "John Lilly's personal blog site built using 11ty and Pico CSS.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmlilly/johnsblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmlilly/johnsblog/issues"
+  },
+  "homepage": "https://github.com/johnmlilly/johnsblog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
+    "eleventy-plugin-metagen": "^1.8.3",
+    "luxon": "^3.5.0"
+  },
+  "dependencies": {
+    "@picocss/pico": "^2.0.6",
+    "bootstrap-icons": "^1.11.3"
+  }
+}
