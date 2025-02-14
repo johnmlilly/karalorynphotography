@@ -53,3 +53,35 @@ dd {
   src: url('/assets/fonts/IBMPlexSans-Bold.ttf') format("truetype");
   font-display: swap;
 }
+
+/* A11y Carousel Slider */
+
+.slider {
+  display: flex;
+  overflow: hidden; /* Hide the overflow */
+  gap: 0.5rem;
+}
+
+.slider li {
+  flex: 0 0 auto; /* Ensures items don't stretch */
+  width: 100%; /* Initially, we display one slide per screen */
+  list-style-type: none;
+}
+
+.slider img, .slider picture {
+  width: 100%;
+  height: auto; /* Adjust this value as needed */
+  object-fit: contain; /* This ensures images fill the area without distorting */
+}
+
+@media (min-width: 768px) {
+  .slider li {
+    width: 50%; /* Display 2 slides for screens 768px and up */
+  }
+}
+
+@media (min-width: 1280px) {
+  .slider li {
+    width: 33.33%; /* Display 3 slides for screens 1280px and up */
+  }
+}

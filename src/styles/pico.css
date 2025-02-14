@@ -361,7 +361,7 @@ details summary[role=button]:not(.outline)::after {
   [role=button]):not(.outline)::before {
     filter: brightness(0);
   }
-}
+
 [data-theme=dark] {
   --pico-background-color: #13171f;
   --pico-color: #c2c7d0;
