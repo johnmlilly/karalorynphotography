@@ -1,7 +1,7 @@
 {
-  "name": "johnsblog",
+  "name": "karalorynphotography",
   "version": "1.0.0",
-  "description": "John Lilly's personal blog site built using 11ty and Pico CSS.",
+  "description": "Kara Loryn Photography's Wedding Photography Website.",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "eleventy-plugin-metagen": "^1.8.3",
     "luxon": "^3.5.0"
