@@ -762,549 +762,141 @@ button:disabled,
   }
 }
 
-.episode-feature {
-  background-color: var(--clr-white);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  padding: 3rem;
-  display: grid;
-  gap: 3rem;
-  max-width: 1200px;
-  margin-inline: auto;
-}
-
-.episode-feature img {
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  width: 100%;
-}
-
-.episode-feature h2 {
-  font: var(--fw-700) var(--fs-500) var(--ff-sub-heading);
-  color: var(--clr-primary-forest);
-  text-transform: uppercase;
-}
-
-.episode-feature h3 {
-  font: var(--fw-400) var(--fs-300) var(--ff-sub-heading);
-  letter-spacing: 3px;
-  color: var(--clr-primary-forest);
-  text-transform: uppercase;
-}
-
-.episode-feature__text {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.episode-feature__heading {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem
-}
-
-.episode-feature__text audio {
-  width: 100%;
-}
-
-/* Target the controls in browsers that support custom styling */
-.episode-feature__-text audio::-webkit-media-controls-panel {
-  background-color: #66806b;
-  /* Your primary color */
-}
-
-.podcast-description {
-  padding-block: 4rem 0;
-  max-width: 1000px;
-  margin-inline: auto;
-  text-align: center;;
-}
-
-.podcast-description h2 {
-  font-size: var(--fs-xl);
-  color: var(--clr-primary-forest);
-  line-height: 1.6;
-  padding-block: 0 1.5rem;
-}
-
-.podcast-description p {
-  color: var(--clr-primary-forest);
-  padding-block: 1rem;
-  line-height: 1.6;
-}
-
-.podcast-icons-container {
-  display: flex;
-  gap: 6rem;
-  justify-content: center;
-}
-
-.podcast-icons {
-  padding-block: 2rem;
-  font-size: 2rem;
-}
-
-.podcast-icons div:nth-child(2) {
-  display: flex;
-  gap: 1rem;
-}
-
-.podcast-icons h3 {
-  padding-bottom: .75rem;
-  font-size: var(--fs-400);
-  font-weight: var(--fw-400);
-  color: var(--clr-primary-blush);
-  text-transform: uppercase;
-  font-family: var(--ff-sub-heading);
-}
-
-.podcast-icons svg {
-  width: 40px;
-  height: 40px;
-  fill: var(--clr-primary-forest);
-}
-
-.featured-episode {
-  display: grid;
-  align-items: center;
-  max-width: 1400px;
-  margin-inline: auto;
-  justify-content: center;
-}
-
-.featured-episode h2 {
-  font-size: var(--fs-xl);
-  color: var(--clr-primary-blush);
-  padding-block: 0 2rem;
-}
-
-.featured-episode__media {
-  display: flex;
-  justify-content: center;
-  transform: translate(97.3783px, -100px) rotate(5deg);
-}
-
-.featured-episode__phone {
-  display: none;
-  max-width: 400px;
-}
-
-.episode-list {
-  display: grid;
-  gap: 0.5rem;
-  grid-template-areas: "number number" "title play";
-  grid-template-columns: auto;
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--clr-primary-blush);
-  border-bottom: px solid var(--clr-primary-blush);
-  justify-content: space-between;
-}
-
-.episode-list--last {
-  border-bottom: none;
-}
-
-.episode-list h3 {
-  grid-area: title;
-  color: var(--clr-primary-forest);
-  font-size: var(--fs-600);
-}
-
-.episode-list span {
-  grid-area: number;
-  color: var(--clr-primary-blush);
-  font-size: 6rem;
-  font-family: var(--ff-heading);
-}
-
-.episode-list a {
-  grid-area: play;
-}
-
-.host-profile {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 1200px;
-  margin-inline: auto;
-}
-
-.host-profile--background {
-  background-image: url('/assets/stock/beautiful-calla-flowers-on-brown-background-2024-09-25-06-01-50-utc.png');
-  background-attachment: scroll;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-/* Overlay using ::before pseudo-element */
-.host-profile--background::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 100%;
-  background-color: #905136;
-  opacity: 0.8;
-  z-index: 1;
-}
-
-/* Ensure content inside .host-profile--background stays above the overlay */
-.host-profile--background>* {
-  position: relative;
-  z-index: 2;
-}
-
-.host-profile img {
-  aspect-ratio: 1 /1;
-  object-fit: cover;
-}
-
-.host-profile span {
-  font-size: 1rem;
-  letter-spacing: 3px;
-  color: var(--clr-secondary-lace);
-}
-
-.host-profile h2 {
-  font-size: var(--fs-xl);
-  padding-block: 0.5rem 1.5rem;
-  color: var(--clr-secondary-lace);
-}
-
-.host-profile p {
-  color: var(--clr-white);
-  padding-block: 0 1.5rem
-}
-
-.recent-episodes {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(225px, 100%), 1fr));
-  margin-block: 1.5rem 2.5rem;
-  color: var(--clr-primary-blush)
-}
-
-.recent-episodes-heading {
-  font-size: var(--fs-500);
-  color: var(--clr-primary-forest);
-  text-align: center;
-  padding-block: 0 1.5rem;
-}
-
-.recent-episodes--cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.recent-episodes--cards h3 {
-  font-size: var(--fs-medium);
-}
-
-.recent-episodes--cards h3 a {
-  text-decoration: none;
-  color: var(--clr-primary-blush);
-}
-
-.recent-episodes--cards h3 a:is(:hover, :focus) {
-  text-decoration: underline;
-}
-
-.recent-episodes--cards span {
-  font-size: var(--fs-default);
-  text-transform: uppercase;
-  color: var(--clr-primary-forest)
-}
-
-.testimonials {
-  border-top: 1px solid var(--clr-primary-forest);
-  border-bottom: 1px solid var(--clr-primary-forest);
-  padding: min(10vh, 4rem);
-  overflow-x: hidden;
-  color: var(--clr-primary-blush);
-  position: relative;
-}
-
-.testimonials-slider {
-  max-width: 1200px;
-  margin-inline: auto;
-}
-
-.testimonials p {
-  font-family: var(--ff-sub-heading);
-  text-transform: uppercase;
-}
-
-.open-quote {
-  position: relative;
-}
-
-/* Add open quote mark using ::before */
-.open-quote::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 45%;
-  font-size: 5rem;
-  width: 50px;
-  height: 50px;
-  color: var(--clr-primary-forest);
-  z-index: 1;
-  background-color: var(--clr-white);
-  padding: 0 1rem;
-  line-height: 1;
-  background-color: white;
-  background-image: url('/assets/icons/Quotes.svg');
-  background-repeat: no-repeat;
-
-}
-
-/* Content overlay on top of the parallax background */
-.guest-contact {
-  padding: 3rem;
-  max-width: 1200px;
-  margin-inline: auto;
-  background-color: rgba(255, 255, 255, 0.9);
-  position: relative;
-  z-index: 10;
-}
-
-.guest-contact h2 {
-  color: var(--clr-primary-forest);
-  font-size: var(--fs-xl);
-  padding-block: 0 1rem;
-}
-
-/* Parallax section with fixed background */
-.guest-contact-section {
-  background-image: url('/assets/stock/leaf-shadow-on-pastel-background-creative-abstrac-2023-11-27-05-36-59-utc.jpg');
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-/* //////////////////////
- Form Styling
-  /////////////////////// */
-
-.form-container {
+/* Featured Weddings Section */
+.featured-weddings {
   max-width: 1200px;
   margin: 0 auto;
-  padding-block: 2.5rem 0;
+  padding: 40px 20px 80px;
 }
 
-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+/* Section Heading */
+.section-heading {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--clr-primary-forest);
+  text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
-.form-group {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.form-group button {
+/* Weddings Container */
+.weddings-container {
   display: flex;
-  align-items: start;
-  justify-self: end;
-  height: fit-content;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-label {
-  display: block;
-  visibility: hidden;;
-  font-weight: bold;
-  color: var(--clr-primary-blush)
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  border: 2px solid var(--clr-primary-blush);
-  border-radius: 2rem;
-  box-sizing: border-box;
-  background-color: transparent;
-  color: var(--clr-primary-blush);
-}
-
-input::placeholder, textarea::placeholder {
-  opacity: 0.75;
-  color: var(--clr-primary-blush)
-}
-
-textarea {
-  min-height: 13rem;
-  margin-bottom: 1rem;
-  resize: none;
-}
-
-textarea {
-  height: 100px;
-  resize: vertical;
-}
-
-/* //////////////////////
-  Episode Page
-  /////////////////////// */
-
-.episode-header {
-  display: grid;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding-block: 1.5rem 3rem;
-}
-
-.episode-header__media {
-  width: 250px;
+/* Wedding Item */
+.wedding-item {
   flex: 1;
-}
-
-.episode-header__meta {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.episode-header__details {
-  display: flex;
-  gap: 0.5rem;
   align-items: center;
-  flex-wrap: wrap;
-  color: var(--clr-primary-forest);
-}
-
-.episode-header__meta audio {
-  width: 100%;
-}
-
-.episode-header__meta h1 {
-  padding-block: 0 1rem;
-  color: var(--clr-primary-blush);
-}
-
-.episode-header__share {
-  display: flex;
-  gap: 0.5rem;
-  padding-block: 1rem 0;
-}
-
-.episode-header__meta svg {
-  width: 32px;
-  height: 32px;
-  fill: var(--clr-primary-forest);
-}
-
-.episode-header__meta a {
-  text-decoration: none;
-}
-
-.episode-header__details svg {
-  width: 16px;
-  height: 16px;
-}
-
-.episode-content {
-  padding-block: 2rem;
-}
-
-@media (min-width: 992px) {
-
-section, .section {
-  padding: min(10vh, 4rem) 1.5rem;
-}
-
-.footer-container {
-  padding: min(10vh, 4rem) 1.5rem 0 1.5rem;
-}
-
-.footer__cta div:is(:first-child, :last-child) {
-  height: 100px;
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 
-.footer__cta div:first-child {
-  border-right: 1px solid var(--clr-primary-blush);
-  padding-right: 6rem;
+/* Wedding Image */
+.wedding-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.footer__cta div:last-child {
-  border-left: 1px solid var(--clr-primary-blush);
-  padding-left: 6rem;
+.wedding-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-
-.primary-navigation {
-  gap: 4rem;
+.wedding-image:hover img {
+  transform: scale(1.05);
 }
 
-.primary-header {
-  padding: 2rem 5rem;
+/* Wedding Number */
+.wedding-number {
+  font-family: var(--ff-sub-heading);
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--clr-primary-blush);
+  margin-bottom: 5px;
 }
 
-.primary-header div p {
-  text-align: left;
+/* Wedding Couple */
+.wedding-couple {
+  font-family: var(--ff-body);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 5px;
 }
 
-  .hero {
-    height: 850px;
+/* Wedding Location */
+.wedding-location {
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--clr-accent-sand);
+  margin: 0 0 25px;
+}
+
+/* View Gallery Button */
+.view-gallery-btn {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: var(--clr-primary-blush);
+  padding: 12px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-gallery-btn:hover {
+  background-color: var(--clr-secondary-lace);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .weddings-container {
+    flex-wrap: wrap;
   }
 
-    .host-profile--background, .guest-contact-section {
-      background-attachment: fixed;
-    }
-
-  .episode-feature {
-    margin-top: -12rem;
-    z-index: 2;
-    position: relative;
-    grid-template-columns: 0.25fr 0.75fr;
+  .wedding-item {
+    flex: 0 0 calc(50% - 15px);
+    margin-bottom: 40px;
   }
-
-  .episode-list {
-    grid-template-areas: "number title play";
-    grid-template-columns: 0.25fr 1fr auto;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .featured-episode {
-    grid-template-columns: 0.75fr 0.25fr;
-    gap: 5rem;
-    padding-block: 0 3rem;
-  }
-
-    .featured-episode__phone {
-      display: block;
-    }
-
-    .host-profile {
-      flex-direction: row;
-    }
-
-    .host-profile img {
-      height: 400px;
-    }
-
-    /* Add open quote mark using ::before */
-    .open-quote::before {
-      top: 45px;
-      left: 48%;
-    }
-
-        .episode-header {
-          grid-template-columns: 0.25fr 0.75fr;
-        }
-
 }
+
+@media (max-width: 600px) {
+  .wedding-item {
+    flex: 0 0 100%;
+  }
+
+  .wedding-image {
+    height: 350px;
+  }
+
+  .wedding-number {
+    font-size: 4rem;
+  }
+
+  .wedding-couple {
+    font-size: 1.5rem;
+  }
+}
+
+
 @media (min-width: 1200px) {
   .primary-header div:last-child, .primary-header div:first-child {
       justify-content: center;
